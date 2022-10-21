@@ -1,0 +1,43 @@
+@import "./variable";
+
+/* Button color*/
+.button_bg_yellow {
+    background-color: yellow;
+    &:disabled {
+        background-color: $grey-200;
+        color: $white;
+    }
+}
+
+/* Background-color*/
+.bg_white {
+    background-color: $white;
+}
+.bg_gray {
+    background-color: $grey-100;
+}
+
+/* Font color*/
+.color_white {
+    color: $white;
+}
+.color_black {
+    color: $black;
+}
+.color_red {
+    color: $red;
+}
+.color_grey_700 {
+    color: #7e7e7e;
+}
+.color_blue {
+    color: $blue;
+}
+
+/* Border color*/
+.border-color_grey {
+    border: 1px solid #d0cfcf;
+}
+.border-color_red {
+    border: 1px solid $red;
+}

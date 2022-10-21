@@ -1,0 +1,35 @@
+@import '../../style/variable';
+.loader {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $white;
+  }
+  .loader-icon {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    z-index: 9999;
+    top: 50%;
+    background: transparent;
+    border: 16px solid rgba(167, 175, 191, 0.4);
+    border-radius: 90%;
+    border-top: 16px solid $blue;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
