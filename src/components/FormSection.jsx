@@ -214,13 +214,19 @@ const FormSection = () => {
                         </div>
                     </div>
                     <div className="bg_gray mt-3" style={{ width: "328px", height: "54px" }}>
-                        <label className={`form-control h-100 p-0 ${isErrorImageUpload ? "is-invalid" : ""}`} style={{ backgroundColor: "#E5E5E5" }}>
+                        <label className={`form-control d-flex h-100 p-0 ${isErrorImageUpload ? "is-invalid" : ""}`} style={{ backgroundColor: "#E5E5E5" }}>
                             <span
                                 className="input-group-text h-100"
                                 style={{ borderRadius: "4px 0px 0px 4px", width: "83px", backgroundColor: "#E5E5E5" }}
                                 htmlFor="file-upload">
                                 Upload
                             </span>
+                            {userImage &&
+                                <label
+                                    htmlFor="exampleInputPhone"
+                                    className="font-size_12 align-self-center color_grey_700 mt-1 px-3">
+                                    File {userImage.name} uploaded
+                                </label>}
                             <input
                                 value={""}
                                 type="file"
@@ -231,7 +237,6 @@ const FormSection = () => {
                                 onChange={(e) => validationImage(e)} />
                         </label>
                         {isErrorImageUpload && <span className="color_red font-size_12 ps-3">{isErrorImageUploadMessage}</span>}
-                        {userImage && <label htmlFor="exampleInputPhone" className="font-size_12 color_grey_700 mt-1">File {userImage.name} uploaded</label>}
                     </div>
                 </form>
                 <button
@@ -260,7 +265,6 @@ const FormSection = () => {
                     <h1 className="font-size_40 bg_white">User successfully registered</h1>
                 </div>
             }
-
         </section>
     )
 }

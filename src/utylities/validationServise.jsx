@@ -1,5 +1,3 @@
-
-
 export function validationName(value) {
     let isValidation = true;
     if (value.length < 2 || value.length > 60) {
@@ -21,7 +19,7 @@ export function validationEmail(value) {
 
 export function validationPhoneNumber(value) {
     let isValidation = true;
-    const filter = /^[\+]{0,1}380([0-9]{9})$/;
+    const filter = /^[+]{0,1}380([0-9]{9})$/;
     if (!filter.test(value)) {
         isValidation = false;
         return isValidation;
